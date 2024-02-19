@@ -6,21 +6,240 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-* {
-  box-sizing: border-box;
+.search-bar {
+  width: 95%;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 0.75rem;
+  padding:0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
 }
+
+.hotel-list-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-list-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  height: 160px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hotel-list-item .image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* .hotel-info {
+  margin-bottom: 0.4rem;
+} */
+
+.hotel-info h3 {
+  font-size: 1rem;
+  /* margin-bottom: 0.5rem; */
+  color: #000;
+}
+
+.hotel-info p {
+  font-size: 0.9rem;
+  color: #252121d2;
+  text-align: justify;
+}
+
+.hotel-info .sub-heading {
+  font-size: 0.6rem;
+  color: rgb(20, 208, 20);
+}
+
+.favorite-btn {
+  width: 40%;
+  margin-bottom: 0.6rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+.favorite-btn p {
+  font-size: 1.15rem;
+}
+
+/* .favorite-button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+.details-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.top-details {
+  width: 100%;
+  height: 40%;
+  /* border: 2px solid grey; */
+}
+
+.bottom-details {
+  bottom: 0;
+  height: 60%;
+  width: 100%;
+  /* border: 2px solid green; */
+}
+
+.hotel-details-container {
+  max-width: 1200px;
+  /* width: 100%; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 
+.hotel-details-container .back-button {
+  color: #000;
+  border: 1px solid #e3e3e3;
+  border-radius: 100%;
+  padding: 0.7rem;
+  margin-left: 0.8rem;
+} */
+
+.hotel-details-container .image-container1 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.back-button,
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  padding: 8px 12px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.back-button {
+  left: 10px;
+}
+
+.favorite-button {
+  right: 10px;
+}
+
+
+.hotel-details-container .image-container1 .hotel-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.hotel-details-container .hotel-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 25px;
+  /* gap: 1rem; */
+  /* overflow: hidden; */
+}
+
+.hotel-details-container .hotel-info .loc-info {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.hotel-details-container .hotel-info .desc {
+  font-size: 1.2rem;
+  color: #666;
+  overflow: hidden;
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+.hotel-details-container .hotel-price {
+  /* background-color: #000; */
+  width: 85%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.8rem;
+  height: 20px;
+}
+
+.hotel-details-container .hotel-price .price {
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.hotel-details-container .hotel-price .include {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.fav-button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-btn {
+  height: 34px;
+  width: auto;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  margin-right: 0.8rem;
+  font-weight: bold;
+  padding: 8px;
+}
+

@@ -1,0 +1,9 @@
+{
+    "name": "My Hotels",
+    "short_name": "Hotels",
+    "description": "A progressive web app containing hotel details",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "background_color": "#ffffff"
+}
